@@ -41,3 +41,7 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'mongoid'
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+
