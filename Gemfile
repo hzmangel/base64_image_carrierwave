@@ -48,4 +48,5 @@ gem 'bson_ext'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem 'mongoid-grid_fs', github: 'ahoward/mongoid-grid_fs'
 
+gem 'haml'
 
