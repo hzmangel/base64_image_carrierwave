@@ -42,6 +42,10 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'mongoid'
+gem 'mongoid', github: 'mongoid/mongoid'
+gem 'bson_ext'
+
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+gem 'mongoid-grid_fs', github: 'ahoward/mongoid-grid_fs'
+
 
