@@ -1,13 +1,13 @@
 = form_for @rcd do |f|
-  %div
+  .form-group
     = f.label :title
-    = f.text_field :title
+    = f.text_field :title, :class => "form-control"
 
-  %div
+  .form-group
     = f.label :content
-    = f.text_area :content
+    = f.text_area :content, :class => "form-control"
 
   %div
-    = f.submit
+    = f.submit :class => "btn btn-default"
     or
     = link_to "Back to post list", posts_path

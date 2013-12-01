@@ -1,4 +1,8 @@
-%h1= @rcd.title
+.page-header
+  %h1= @rcd.title
+
 %p= @rcd.content
 
-%div=link_to "Back to posts list", posts_path
+%hr
+
+%div=link_to "<< Back to posts list", posts_path, :class => "btn btn-default"

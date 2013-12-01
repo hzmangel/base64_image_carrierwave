@@ -1,6 +1,7 @@
-%h1 Post List
-
-%div= link_to "New Post", new_post_path
+.page-header
+  %h1
+    Post List
+    %small= link_to "New Post", new_post_path, :class => "btn btn-primary"
 
 %div
   %table.table
