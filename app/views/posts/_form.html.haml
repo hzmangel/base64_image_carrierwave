@@ -5,7 +5,8 @@
 
   .form-group
     = f.label :content
-    = f.text_area :content, :class => "form-control"
+    = render "posts/editor"
+    = f.hidden_field :content, :value => f.object.content
 
   %div
     = f.submit :class => "btn btn-default"

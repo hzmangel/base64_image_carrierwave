@@ -1,0 +1,76 @@
+.btn-toolbar{"data-role" => "editor-toolbar", "data-target" => "#editor"}
+  .btn-group
+    %a.btn.btn-default.dropdown-toggle{"data-original-title" => "Font Size", "data-toggle" => "dropdown", :title => ""}
+      %i.fa.fa-text-height>
+      \&nbsp;
+      %b.caret
+    %ul.dropdown-menu
+      %li
+        %a{"data-edit" => "fontSize 5"}
+          %font{:size => "5"} Huge
+      %li
+        %a{"data-edit" => "fontSize 3"}
+          %font{:size => "3"} Normal
+      %li
+        %a{"data-edit" => "fontSize 1"}
+          %font{:size => "1"} Small
+  .btn-group
+    %a.btn.btn-default{"data-edit" => "bold", "data-original-title" => "Bold", :title => ""}
+      %i.fa.fa-bold
+    %a.btn.btn-default{"data-edit" => "italic", "data-original-title" => "Itailic", :title => ""}
+      %i.fa.fa-italic
+    %a.btn.btn-default{"data-edit" => "strikethrough", "data-original-title" => "Strikethrough", :title => ""}
+      %i.fa.fa-strikethrough
+    %a.btn.btn-default{"data-edit" => "underline", "data-original-title" => "Underline", :title => ""}
+      %i.fa.fa-underline
+    %a.btn.btn-default{"data-edit" => "removeformat", "data-original-title" => "Clear Format", :title => ""}
+      %i.fa.fa-eraser
+  .btn-group
+    %a.btn.btn-default.dropdown-toggle{"data-original-title" => "Color", "data-toggle" => "dropdown", :title => ""}
+      %i.fa.fa-tint>
+      \&nbsp;
+      %b.caret
+    %ul.dropdown-menu
+      - %w{ ff0000 00ff00 0000ff 00ffff ff00ff ffff00 }.each do |col|
+        %li
+          %a{"data-edit" => "foreColor ##{col}"}
+            %div{:style => "background-color: ##{col}"} &nbsp;
+  .btn-group
+    %a.btn.btn-default{"data-edit" => "insertunorderedlist", "data-original-title" => "Buller List", :title => ""}
+      %i.fa.fa-list-ul
+    %a.btn.btn-default{"data-edit" => "insertorderedlist", "data-original-title" => "Number List", :title => ""}
+      %i.fa.fa-list-ol
+    %a.btn.btn-default{"data-edit" => "outdent", "data-original-title" => "Reduce Indent", :title => ""}
+      %i.fa.fa-outdent
+    %a.btn.btn-default{"data-edit" => "indent", "data-original-title" => "Indent", :title => ""}
+      %i.fa.fa-indent
+  .btn-group
+    %a.btn.btn-default.btn-info{"data-edit" => "justifyleft", "data-original-title" => "Align Left", :title => ""}
+      %i.fa.fa-align-left
+    %a.btn.btn-default{"data-edit" => "justifycenter", "data-original-title" => "Center Align", :title => ""}
+      %i.fa.fa-align-center
+    %a.btn.btn-default{"data-edit" => "justifyright", "data-original-title" => "Right Align", :title => ""}
+      %i.fa.fa-align-right
+    %a.btn.btn-default{"data-edit" => "justifyfull", "data-original-title" => "Justify", :title => ""}
+      %i.fa.fa-align-justify
+  .btn-group
+    %a.btn.btn-default.dropdown-toggle{"data-original-title" => "Link", "data-toggle" => "dropdown", :title => ""}
+      %i.fa.fa-link
+    .dropdown-menu.input-append
+      %input.col-md-2{"data-edit" => "createLink", :placeholder => "URL", :type => "text"}/
+      %button.btn.btn-default{:type => "button"} Add
+    %a.btn.btn-default{"data-edit" => "unlink", "data-original-title" => "Remove Link", :title => ""}
+      %i.fa.fa-cut
+  .btn-group
+    %a#pictureBtn.btn.btn-default{"data-original-title" => "Insert Picture", :title => ""}
+      %i.fa.fa-picture-o
+    %input{"data-edit" => "insertImage", "data-role" => "magic-overlay", "data-target" => "#pictureBtn", :style => "opacity: 0; position: absolute; top: 0px; left: 0px; width: 36px; height: 30px;", :type => "file"}/
+  .btn-group
+    %a.btn.btn-default{"data-edit" => "undo", "data-original-title" => "Undo", :title => ""}
+      %i.fa.fa-undo
+    %a.btn.btn-default{"data-edit" => "redo", "data-original-title" => "Redo", :title => ""}
+      %i.fa.fa-repeat
+
+#editor.editor{:contenteditable => "true"}
+
+
