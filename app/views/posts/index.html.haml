@@ -13,6 +13,6 @@
         %tr
           %td= r.title
           %td
-            = link_to "edit", edit_post_path(r)
+            = link_to "edit", edit_post_path(r), "data-no-turbolink" => 'true'
             = link_to "show", post_path(r)
             = link_to "delete", post_path(r), :method => :delete
