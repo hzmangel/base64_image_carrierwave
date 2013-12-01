@@ -1,0 +1,17 @@
+%h1 Post List
+
+%div= link_to "New Post", new_post_path
+
+%div
+  %table.table
+    %thead
+      %td title
+      %td actions
+    %tbody
+      - @rcds.each do |r|
+        %tr
+          %td= r.title
+          %td
+            = link_to "edit", edit_post_path(r)
+            = link_to "show", post_path(r)
+            = link_to "delete", post_path(r), :method => :delete
